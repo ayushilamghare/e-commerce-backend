@@ -5,8 +5,10 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon --exec \"node -r ./slowbuffer-shim.cjs\" index.js",
-    "postinstall": "npm rebuild bcrypt --build-from-source"
+    "start": "node -r ./slowbuffer-shim.cjs index.js",
+    "dev": "nodemon --exec \"node -r ./slowbuffer-shim.cjs\" index.js",
+    "build": "npm rebuild bcrypt --build-from-source",
+    "heroku-postbuild": "npm run build"
   },
   "keywords": [
     "ecommerce",
