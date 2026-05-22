@@ -53,7 +53,7 @@ app.use((err, req, res, next) => {
 });
 
 const port = process.env.PORT || 8000;
-const host = process.env.HOST || "127.0.0.1";
+const host = process.env.HOST || "0.0.0.0";
 
 const server = app.listen(port, host, () => {
   console.log(`Node server is running on http://${host}:${port}`);
