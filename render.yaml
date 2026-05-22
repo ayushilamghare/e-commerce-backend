@@ -1,7 +1,0 @@
-services:
-  - type: web
-    name: e-commerce-backend
-    env: node
-    plan: free
-    buildCommand: rm -rf node_modules && npm install && npm rebuild bcrypt --build-from-source
-    startCommand: node -r ./slowbuffer-shim.cjs index.js
